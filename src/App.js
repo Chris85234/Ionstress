@@ -1,24 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Navbar from "./components/navbar";
-import Hero from "./components/hero";
-import Solutions from "./components/solutions";
-import Contact from "./components/contact";
 import Footer from "./components/footer";
-import "../styles/styles.css";
+import "./styles/styles.css";
 
-function App() {
+const App = () => {
   return (
-    <Router>
+    <div>
       <Navbar />
-      <Hero />
-      <Solutions />
-      <Routes>
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Outlet />
       <Footer />
-    </Router>
+    </div>
   );
-}
+};
 
 export default App;

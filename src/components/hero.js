@@ -1,19 +1,26 @@
 import React from "react";
-import { motion } from "framer-motion";
-import "../styles/styles.css";
+import "./styles/styles.css";
 
 const Hero = () => {
   return (
-    <motion.div 
-      className="hero"
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <h1>Drones that detect the power of the planet</h1>
-      <p>We specialize in aerial inspections to improve the efficiency and sustainability of renewable energy systems.</p>
-      <button className="btn">Get Inspection</button>
-    </motion.div>
+    <section className="hero">
+      <nav className="navbar">
+        <img src="./assets/logo.png" alt="IonSpark Logo" className="logo" />
+        <ul className="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/technology">Technology</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div className="hero-content">
+        <h1 className="hero-title">Drones that detect the power of the planet</h1>
+        <p className="hero-description">
+          We specialize in aerial inspections to improve the efficiency and sustainability of renewable energy systems.
+        </p>
+        <button className="cta-button">Get inspection</button>
+      </div>
+    </section>
   );
 };
 
