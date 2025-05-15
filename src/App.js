@@ -1,17 +1,17 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
 import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import "./styles/styles.css";
+import Hero from "./components/hero";
+import OurSolutions from "./components/OurSolutions";
 
-const App = () => {
+function App() {
   return (
     <div>
       <Navbar />
-      <Outlet />
-      <Footer />
+      <Hero />
+      <OurSolutions />
     </div>
   );
-};
+}
 
 export default App;
+

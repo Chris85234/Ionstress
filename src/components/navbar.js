@@ -1,16 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "../styles/styles.css"; // Importamos los estilos
+import "../styles/styles.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h1 className="logo">IonSpark</h1>
-      <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/contact">Contact</Link>
-      </div>
+      <img src="/assets/logo.png" alt="IonSpark Logo" className="logo" />
+      <ul className="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
     </nav>
   );
 };
