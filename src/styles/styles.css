@@ -1,8 +1,8 @@
 /* Variables Globales */
 :root {
-  --primary-color: #1a1a1a;         /* Fondo oscuro para secciones principales */
-  --accent-color: #4CAF50;          /* Color de acento (verde) */
-  --text-color: #fff;               /* Texto en fondos oscuros */
+  --primary-color: #1a1a1a;
+  --accent-color: #4CAF50;
+  --text-color: #fff;
   --font-main: "Poppins", sans-serif;
 }
 
@@ -15,15 +15,14 @@ body {
   color: var(--text-color);
 }
 
-/* ================================= */
-/*              Navbar             */
-/* ================================= */
+/* --------------------------------- */
+/*              Navbar               */
+/* --------------------------------- */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,29 +50,15 @@ body {
   font-size: 1.1rem;
 }
 
-/* ================================= */
-/*             Sección Hero        */
-/* ================================= */
+/* --------------------------------- */
+/*             Sección Hero          */
+/* --------------------------------- */
 .hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   position: relative;
-  /* Ruta modificada para usar la imagen desde public/assets */
-  background: url("../assets/background.jpg") no-repeat center/cover;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(3px);
-  z-index: 1;
+  height: 100vh;
+  background: url("https://img.freepik.com/premium-photo/modern-drones-quadcopters_1022456-1712.jpg") no-repeat center/cover;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -81,16 +66,16 @@ body {
   z-index: 2;
   max-width: 700px;
   padding: 40px;
-  background: rgba(0, 0, 0, 0.4);
+  background: #fff(255, 255, 255, 0.4);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  /* Desplazar el contenido a la izquierda */
-  align-self: flex-start;
-  margin-left: 10%; /* Ajusta este valor para que coincida exactamente con el diseño */
+  margin-left: 10%;
+  margin-top: 170px; /* Este valor baja el contenido; ajústalo según lo necesites */
 }
+
 
 .hero-title {
   font-size: 3rem;
@@ -119,18 +104,21 @@ body {
   transform: translateY(-2px);
 }
 
-/* ================================= */
-/*         Sección Our Solutions   */
-/* ================================= */
+/* --------------------------------- */
+/*         Sección Our Solutions     */
+/* --------------------------------- */
 .our-solutions {
-  background-color: #F5F5F5;  /* Fondo claro según el diseño */
+  position: relative;
+  /* Definimos un fondo semitransparente para que se noten las partículas */
+  background-color: #0B1B2B;
   padding: 80px 20px;
-  color: #1a1a1a;
+  color: #fff;
+  overflow: hidden;
 }
 
-.solutions-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.solutions-content {
+  position: relative;
+  z-index: 2; /* Se ubica sobre el fondo de partículas */
 }
 
 .section-title {
@@ -148,10 +136,10 @@ body {
 }
 
 .solution-card {
-  background-color: #fff;
+  background-color: #153351ff;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px #fff;
   transition: transform 0.3s ease;
 }
 
@@ -168,4 +156,79 @@ body {
 .solution-description {
   font-size: 1rem;
   line-height: 1.6;
+}
+
+/* --------------------------------- */
+/* Contenedor de Particles           */
+/* --------------------------------- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+/* --------------------------------- */
+/*         Sección Propeller         */
+/* --------------------------------- */
+.propeller-section {
+  position: relative;
+  padding: 80px 20px;
+  background-color: #001f3f; /* Azul oscuro */
+  overflow: hidden;
+}
+
+.card-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.text-card {
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Imagen sobrepuesta del aerogenerador */
+.propeller-image-overlay {
+  position: absolute;
+  top: -50px;    /* Ajusta para mover la imagen verticalmente */
+  right: -100px; /* Ajusta para mover la imagen horizontalmente */
+  width: 250px;  /* Tamaño de la imagen, ajusta según el diseño */
+  max-width: 100%;
+  animation: spin 2s linear infinite;
+  z-index: 3;
+}
+
+/* Keyframes para la animación giratoria */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Debe estar en el fondo de la sección (si aún usas el debug, luego elimina el borde) */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* border: 1px solid red;  <-- Utiliza este borde solo para debugear */
 }
