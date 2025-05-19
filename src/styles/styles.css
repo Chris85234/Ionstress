@@ -56,7 +56,7 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background: url("https://img.freepik.com/premium-photo/modern-drones-quadcopters_1022456-1712.jpg") no-repeat center/cover;
+  background: url(/public/assets/background.png) no-repeat center/cover;
   background-size: cover;
   overflow: hidden;
 }
@@ -88,6 +88,7 @@ body {
   margin: 0 0 20px 0;
 }
 
+
 .cta-button {
   background: var(--accent-color);
   color: var(--text-color);
@@ -96,6 +97,7 @@ body {
   border-radius: 8px;
   font-size: 1.1rem;
   cursor: pointer;
+  margin: 0 0 20px 0;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
@@ -112,7 +114,7 @@ body {
   /* Definimos un fondo semitransparente para que se noten las partículas */
   background-color: #0B1B2B;
   padding: 80px 20px;
-  color: #fff;
+  color: #ffffff;
   overflow: hidden;
 }
 
@@ -139,7 +141,7 @@ body {
   background-color: #153351ff;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px #fff;
+  
   transition: transform 0.3s ease;
 }
 
@@ -183,7 +185,7 @@ body {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #153351;
   border-radius: 10px;
   padding: 40px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
