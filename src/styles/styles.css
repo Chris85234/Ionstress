@@ -56,10 +56,53 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background: url(/public/assets/background.png) no-repeat center/cover;
+  background: url("/public/assets/background.png") no-repeat center/cover;
   background-size: cover;
   overflow: hidden;
 }
+
+/* Efecto de halo y blur dinámico aplicado al fondo de Hero */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(4,0,255,0.3) 0%, rgba(136,0,255,0.3) 35%, rgba(209,0,255,0.3) 100%);
+  z-index: -1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 70px; /* Aumentamos la altura para que cubra más el corte */
+  bottom: -60px; /* Bajamos la posición del blur */
+  left: 0;
+  background: linear-gradient(to bottom, rgba(4,0,255,0.4), transparent);
+  filter: blur(25px); /* Intensificamos el desenfoque */
+  transition: 2s;
+  z-index: 1;
+}
+
+.hero:hover::after {
+  animation: heroBlurAnimation 2.5s infinite forwards;
+}
+
+@keyframes heroBlurAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 
 .hero-content {
   position: relative;
@@ -88,34 +131,105 @@ body {
   margin: 0 0 20px 0;
 }
 
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #001f3f(0, 0, 0, 0.3), transparent);
+  z-index: 1;
+}
 
-.cta-button {
-  background: var(--accent-color);
-  color: var(--text-color);
-  padding: 20px 40px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
+/* From Uiverse.io by Allyhere */ 
+.btn-button {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: hsla(194 100% 69% / 1);
+  --btn-bg-2: hsla(217 100% 56% / 1);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
   cursor: pointer;
-  margin: 0 0 20px 0;
-  transition: background 0.3s ease, transform 0.3s ease;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    var(--btn-bg-2) 0%,
+    var(--btn-bg-1) 55%,
+    var(--btn-bg-2) 90%
+  );
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow:
+    0px 0px 20px rgba(71, 184, 255, 0.5),
+    0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+    inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+    inset -4px -4px 8px rgba(19, 95, 216, 0.35);
 }
 
-.cta-button:hover {
-  background: #3e8e41;
-  transform: translateY(-2px);
+.btn-button:hover {
+  background-position: right top;
 }
+
+.btn-button:is(:focus, :focus-visible, :active) {
+  outline: none;
+  box-shadow:
+    0 0 0 3px var(--btn-bg-color),
+    0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
+}
+
 
 /* --------------------------------- */
 /*         Sección Our Solutions     */
 /* --------------------------------- */
+/* Our Solutions Section */
 .our-solutions {
   position: relative;
-  /* Definimos un fondo semitransparente para que se noten las partículas */
-  background-color: #0B1B2B;
   padding: 80px 20px;
-  color: #ffffff;
+  background:  #001f3f; /* Degradado para una transición suave */
   overflow: hidden;
+  margin-top: 0; /* Eliminar espacio extra */
+  padding-top: 0;
+  border-top: none; /* Asegurar que no haya borde */
+}
+.our-solutions::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 180px; /* Altura del desenfoque */
+  top: -50px; /* Baja el efecto para tapar el corte */
+  left: 0;
+  background: linear-gradient(to top, rgba(4,0,255,0.4), transparent);
+  filter: blur(25px); /* Intensidad del desenfoque */
+  transition: 2s;
+  z-index: 1;
+}
+
+.our-solutions:hover::before {
+  animation: ourSolutionsBlurAnimation 2.5s infinite forwards;
+}
+
+@keyframes ourSolutionsBlurAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .solutions-content {
@@ -233,4 +347,42 @@ body {
   left: 0;
   z-index: 1;
   /* border: 1px solid red;  <-- Utiliza este borde solo para debugear */
+}
+
+/*Carrousel energys*/
+.energy-carousel {
+  background-color:#001f3f;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.carousel-logo img {
+  width: 120px; /* Ajusta el tamaño según los logos */
+  margin: 10px auto;
+  display: block;
+}
+ 
+/*Energy cards */
+.energy-services {
+  background-color: #001f3f;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #153351;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-title {
+  font-size: 1.5rem;
+  color: #4CAF50;
 }

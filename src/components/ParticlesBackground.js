@@ -21,8 +21,8 @@ const ParticlesBackground = () => {
         top: 0,
         left: 0,
         zIndex: 1,
-        // Borde temporal para depuración; elimina o comenta cuando se vea correctamente
-        border: "1px solid red"
+        
+      
       }}
     ></div>
   );

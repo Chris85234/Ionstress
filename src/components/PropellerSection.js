@@ -15,7 +15,7 @@ const PropellerSection = () => {
           <p className="section-description">
             Nuestro enfoque combina tecnología de drones y análisis avanzado para transformar la forma de inspeccionar y optimizar sistemas energéticos. Con una solución integral, aplicamos inteligencia artificial para detectar y mejorar el rendimiento de infraestructuras energéticas clave, impulsando la eficiencia y la sostenibilidad de nuestro planeta.
           </p>
-          <button className="cta-button">Descubrir más</button>
+          <button className="btn-button">Descubrir más</button>
         </div>
       </div>
       {/* Imagen sobrepuesta (a la derecha) – utiliza la imagen de aerogenerador */}
