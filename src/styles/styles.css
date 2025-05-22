@@ -403,4 +403,52 @@ body {
   color: #4CAF50;
 }
 
+.results-section {
+  background-color: #0B1F3F;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
 
+.results-card {
+  background-color: #FFFFFF; /* Fondo blanco de la tarjeta */
+  border-radius: 12px; /* Bordes redondeados como en Figma */
+  padding: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  width: 80%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.results-title {
+  font-family: "K2D", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #001F3F;
+  margin-bottom: 20px;
+}
+
+.results-chart {
+  width: 100%;
+  max-width: 800px;
+}
+
+.results-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.results-icons img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}

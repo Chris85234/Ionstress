@@ -1,24 +1,22 @@
-import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
-import Hero from "./components/hero";
-import OurSolutions from "./components/OurSolutions";
-import PropellerSection from "./components/PropellerSection";
-import EnergyCarrousel from "./components/EnergyCarrousel";
-import EnergyServices from "./components/EnergyServices";
-import "./styles/styles.css";
+import Home from "./pages/Home";
+
+import Results from "./pages/Results";
+
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      <Hero />
-      <OurSolutions />
-      <PropellerSection />
-      <EnergyCarrousel />
-      <EnergyServices />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      
+        <Route path="/results" element={<Results />} />
+        
+      </Routes>
+    </>
   );
 }
 
 export default App;
-
