@@ -14,8 +14,8 @@ function App() {
       <Hero />
       <OurSolutions />
       <PropellerSection />
-      <EnergyCarrousel /> {/* Sección de carrusel */}
-      <EnergyServices /> {/* Sección de tarjetas */}
+      <EnergyCarrousel />
+      <EnergyServices />
     </div>
   );
 }

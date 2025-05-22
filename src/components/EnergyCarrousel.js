@@ -19,10 +19,10 @@ const EnergyCarrousel = () => {
   return (
     <section className="energy-carrousel">
       <Slider {...settings}>
-        <div className="carrousel-logo"><img src="/public/assets/logo1.png" alt="Solar Capital" /></div>
-        <div className="carrousel-logo"><img src="/public/assets/logo2.png" alt="EBR Energy" /></div>
-        <div className="carrousel-logo"><img src="/public/assets/logo3.png" alt="ENF" /></div>
-        <div className="carrousel-logo"><img src="/public/assets/logo4.png" alt="Advanced Energy" /></div>
+        <div className="carrousel-logo"><img src="/assets/logo1.png" alt="Solar Capital" /></div>
+        <div className="carrousel-logo"><img src="/assets/logo2.png" alt="EBR Energy" /></div>
+        <div className="carrousel-logo"><img src="/assets/logo3.png" alt="ENF" /></div>
+        <div className="carrousel-logo"><img src="/assets/logo4.png" alt="Advanced Energy" /></div>
       </Slider>
     </section>
   );
