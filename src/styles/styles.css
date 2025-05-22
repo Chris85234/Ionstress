@@ -1,7 +1,7 @@
 /* Variables Globales */
 :root {
   --primary-color: #1a1a1a;
-  --accent-color: #4CAF50;
+  --accent-color: #9DCD66;
   --text-color: #fff;
   --font-main: "Poppins", sans-serif;
 }
@@ -129,8 +129,8 @@ body {
   line-height: auto; /* Se ajusta automáticamente */
   letter-spacing: 0%;
   position: absolute;
-  left: 121px;
-  top: 2px;
+  left: 50px;
+  top: -70px;
   width: 403px;
   height: 234px;
 }
@@ -145,8 +145,8 @@ body {
   line-height: auto; /* Ajuste automático */
   letter-spacing: 0%;
   position: absolute;
-  left: 121px;
-  top: 251px; /* Ajusta la posición para coincidir con Figma */
+  left: 35px;
+  top: 170px; /* Ajusta la posición para coincidir con Figma */
   width: 438px;
   height: 65px;
 }
@@ -154,14 +154,14 @@ body {
 .hero-description {
   font-family: "K2D", sans-serif;
   font-weight: 400; /* Regular */
-  font-size: 20px;
+  font-size: 15px;
   color: #FFFFFF; /* Texto blanco */
   text-align: left;
   line-height: auto; /* Ajuste automático */
   letter-spacing: 0%;
   position: absolute;
-  left: 121px;
-  top: 500px; /* Ajusta la posición según Figma */
+  left: -5px;
+  top: 340px; /* Ajusta la posición según Figma */
   width: 1104px;
   height: 40px;
 }
@@ -180,7 +180,7 @@ body {
 .cta-button {
   font-family: "K2D", sans-serif;
   font-weight: 600; /* Bold */
-  font-size: 20px;
+  font-size: 22px;
   color: #FFFFFF; /* Texto blanco */
   background-color: #9DCD66; /* Color exacto del botón */
   border: none;
@@ -189,15 +189,15 @@ body {
   text-align: center;
   cursor: pointer;
   position: absolute;
-  left: 978px; /* Ajustado según Figma */
-  top: 271px; /* Ajustado según Figma */
+  left: 860px; /* Ajustado según Figma */
+  top: 180px; /* Ajustado según Figma */
   width: 242px;
   height: 64px;
   transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #0943A8;
+  background-color: #457112;
 }
 
 
@@ -208,7 +208,7 @@ body {
 .our-solutions {
   position: relative;
   padding: 80px 20px;
-  background:  #001f3f; /* Degradado para una transición suave */
+  background:  #0B1B2B; /* Degradado para una transición suave */
   overflow: hidden;
   margin-top: 0; /* Eliminar espacio extra */
   padding-top: 0;
@@ -221,15 +221,13 @@ body {
   height: 180px; /* Altura del desenfoque */
   top: -50px; /* Baja el efecto para tapar el corte */
   left: 0;
-  background: linear-gradient(to top, rgba(4,0,255,0.4), transparent);
+  background: #0B1B2B;
   filter: blur(25px); /* Intensidad del desenfoque */
   transition: 2s;
   z-index: 1;
 }
 
-.our-solutions:hover::before {
-  animation: ourSolutionsBlurAnimation 2.5s infinite forwards;
-}
+
 
 @keyframes ourSolutionsBlurAnimation {
   0% {
@@ -263,7 +261,7 @@ body {
 }
 
 .solution-card {
-  background-color: #153351ff;
+  background-color: #153351;
   padding: 30px;
   border-radius: 10px;
   
@@ -302,7 +300,7 @@ body {
 .propeller-section {
   position: relative;
   padding: 80px 20px;
-  background-color: #001f3f; /* Azul oscuro */
+  background-color: #0B1B2B; /* Azul oscuro */
   overflow: hidden;
 }
 
@@ -362,7 +360,7 @@ body {
 
 /*Carrousel energys*/
 .energy-carousel {
-  background-color:#001f3f;
+  background-color:#0B1B2B;
   padding: 40px 20px;
   text-align: center;
 }
@@ -374,13 +372,13 @@ body {
 }
 
 .slick-slider {
-  background-color: transparent !important;
+  background-color: #0B1B2B;
 }
 
  
 /*Energy cards */
 .energy-services {
-  background-color: #001f3f;
+  background-color: #0B1B2B;
   padding: 80px 20px;
   text-align: center;
 }
@@ -400,7 +398,9 @@ body {
 
 .service-title {
   font-size: 1.5rem;
-  color: #4CAF50;
+  color: #9DCD66;
 }
 
+/* aquí empieza resolve */
 
+ 
