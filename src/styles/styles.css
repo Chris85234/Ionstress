@@ -319,33 +319,28 @@ body {
   padding: 20px;
 }
 
+
 .section-heading {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 .section-description {
-  font-size: 1.2rem;
+  font-size: 1.0 rem;
   margin-bottom: 20px;
 }
 
 /* Imagen sobrepuesta del aerogenerador */
 .propeller-image-overlay {
   position: absolute;
-  top: -50px;    /* Ajusta para mover la imagen verticalmente */
-  right: -100px; /* Ajusta para mover la imagen horizontalmente */
-  width: 250px;  /* Tamaño de la imagen, ajusta según el diseño */
+  top: -60px;    /* Ajusta para mover la imagen verticalmente */
+  right: -50px; /* Ajusta para mover la imagen horizontalmente */
+  width: 450px;  /* Tamaño de la imagen, ajusta según el diseño */
   max-width: 100%;
-  animation: spin 2s linear infinite;
   z-index: 3;
 }
 
-/* Keyframes para la animación giratoria */
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 
 /* Debe estar en el fondo de la sección (si aún usas el debug, luego elimina el borde) */
 #particles-js {

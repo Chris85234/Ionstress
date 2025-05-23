@@ -11,16 +11,17 @@ const PropellerSection = () => {
       {/* Contenedor de la card de información */}
       <div className="card-container">
         <div className="text-card">
-          <h2 className="section-heading">Innovación en Energía Renovable</h2>
+          <h4 classname="mini-title">Main initiative</h4>
+          <h2 className="section-heading">“Our Goal is To Change The Modern World Become Nature Friendly”</h2>
           <p className="section-description">
-            Nuestro enfoque combina tecnología de drones y análisis avanzado para transformar la forma de inspeccionar y optimizar sistemas energéticos. Con una solución integral, aplicamos inteligencia artificial para detectar y mejorar el rendimiento de infraestructuras energéticas clave, impulsando la eficiencia y la sostenibilidad de nuestro planeta.
+            We offer to you the best options of renewable energies to save money and the most important thing, help the environment: 
           </p>
           <button className="btn-button">Descubrir más</button>
         </div>
       </div>
       {/* Imagen sobrepuesta (a la derecha) – utiliza la imagen de aerogenerador */}
       <img 
-        src="/assets/propeller.png" 
+        src="/assets/propeller.gif" 
         alt="Aerogenerador Animado" 
         className="propeller-image-overlay" 
       />
