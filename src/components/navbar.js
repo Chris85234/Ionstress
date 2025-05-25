@@ -1,19 +1,17 @@
-// src/components/Navbar.js
-import React from "react";
-import "../styles/styles.css";
+import { Link } from "react-router-dom";
+import "../styles/HomePage/navbar.css" 
 
-const Navbar = () => {
-  return (
-    <nav className="navbar">
-      <img src="/assets/logo.png" alt="IonSpark Logo" className="logo" />
-      <ul className="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/technology">Results</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-  );
-};
+function Navbar() {
+    return (
+        <nav className="navbar">
+            <ul className="nav-links">
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/services">Services</Link></li>
+                <li><Link to="/results">Results</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+            </ul>
+        </nav>
+    );
+}
 
 export default Navbar;

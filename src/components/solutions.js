@@ -1,5 +1,5 @@
 import react from "react";
-import "../styles/styles.css";
+import "../styles/HomePage/ourSolutions.css";
 
 const solutions = [
   { title: "Solar Energy", description: "Uses sunlight to generate electricity through photovoltaic panels and solar thermal collectors." },

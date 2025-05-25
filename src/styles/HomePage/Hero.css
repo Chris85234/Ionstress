@@ -1,0 +1,149 @@
+/* --------------------------------- */
+/*             Sección Hero          */
+/* --------------------------------- */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("/public/assets/background.png") no-repeat center/cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Efecto de halo y blur dinámico aplicado al fondo de Hero */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(4,0,255,0.3) 0%, rgba(136,0,255,0.3) 35%, rgba(209,0,255,0.3) 100%);
+  z-index: -1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 70px; /* Aumentamos la altura para que cubra más el corte */
+  bottom: -60px; /* Bajamos la posición del blur */
+  left: 0;
+  background: linear-gradient(to bottom, rgba(4,0,255,0.4), transparent);
+  filter: blur(25px); /* Intensificamos el desenfoque */
+  transition: 2s;
+  z-index: 1;
+}
+
+.hero:hover::after {
+  animation: heroBlurAnimation 2.5s infinite forwards;
+}
+
+@keyframes heroBlurAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 40px;
+  background: #fff(255, 255, 255, 0.4);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 170px; /* Este valor baja el contenido; ajústalo según lo necesites */
+}
+
+
+.hero-title {
+  font-family: "K2D", sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 48px;
+  color: #FFFFFF; /* Texto blanco */
+  text-align: left; /* Asegurar alineación correcta */
+  line-height: auto; /* Se ajusta automáticamente */
+  letter-spacing: 0%;
+  position: absolute;
+  left: 50px;
+  top: -70px;
+  width: 403px;
+  height: 234px;
+}
+
+
+.hero-subtitle {
+  font-family: "K2D", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 24px;
+  color: #FFFFFF; /* Texto blanco */
+  text-align: left;
+  line-height: auto; /* Ajuste automático */
+  letter-spacing: 0%;
+  position: absolute;
+  left: 35px;
+  top: 170px; /* Ajusta la posición para coincidir con Figma */
+  width: 438px;
+  height: 65px;
+}
+
+.hero-description {
+  font-family: "K2D", sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 15px;
+  color: #FFFFFF; /* Texto blanco */
+  text-align: left;
+  line-height: auto; /* Ajuste automático */
+  letter-spacing: 0%;
+  position: absolute;
+  left: -5px;
+  top: 340px; /* Ajusta la posición según Figma */
+  width: 1104px;
+  height: 40px;
+}
+
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #001f3f(0, 0, 0, 0.3), transparent);
+  z-index: 1;
+}
+
+.cta-button {
+  font-family: "K2D", sans-serif;
+  font-weight: 600; /* Bold */
+  font-size: 22px;
+  color: #FFFFFF; /* Texto blanco */
+  background-color: #9DCD66; /* Color exacto del botón */
+  border: none;
+  padding: 16px 40px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  left: 860px; /* Ajustado según Figma */
+  top: 180px; /* Ajustado según Figma */
+  width: 242px;
+  height: 64px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #457112;
+}

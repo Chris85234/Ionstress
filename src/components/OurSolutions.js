@@ -1,13 +1,10 @@
 // src/components/OurSolutions.js
 import React from "react";
-import ParticlesBackground from "./ParticlesBackground";
-import "../styles/styles.css";
+import "../styles/HomePage/ourSolutions.css";
 
 const OurSolutions = () => {
   return (
     <section className="our-solutions">
-      {/* Fondo de partículas integrado solo en esta sección */}
-      <ParticlesBackground />
       <div className="solutions-content">
         <h2 className="section-title">Our Solutions</h2>
         <div className="solutions-grid">

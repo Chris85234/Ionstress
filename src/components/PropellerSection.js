@@ -1,13 +1,10 @@
 // src/components/PropellerSection.js
 import React from "react";
-import ParticlesBackground from "./ParticlesBackground";
-import "../styles/styles.css";
-
+import "../styles/HomePage/propellerSection.css";
 const PropellerSection = () => {
   return (
     <section className="propeller-section">
       {/* Fondo de partículas en la sección */}
-      <ParticlesBackground />
       {/* Contenedor de la card de información */}
       <div className="card-container">
         <div className="text-card">
