@@ -5,15 +5,34 @@ import "../styles/HomePage/energyCarrousel.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 const EnergyCarrousel = () => {
   const settings = {
     infinite: true,
-    slidesToShow: 3, // Cantidad de logos visibles
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrows: false
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024, // Pantallas medianas (tabletas grandes y laptops)
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 768, // Pantallas pequeñas (tabletas)
+        settings: {
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 480, // Celulares
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   };
 
   return (

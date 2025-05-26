@@ -1,149 +1,99 @@
-/* --------------------------------- */
-/*             Sección Hero          */
-/* --------------------------------- */
 .hero {
   position: relative;
+  width: 100%;
   height: 100vh;
-  background: url("/public/assets/background.png") no-repeat center/cover;
+  background-image: url('/public/assets/background.png'); /* Cambia al path correcto */
   background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  color: white;
   overflow: hidden;
 }
 
-/* Efecto de halo y blur dinámico aplicado al fondo de Hero */
-.hero::before {
-  content: "";
+.hero-mask {
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(135deg, rgba(4,0,255,0.3) 0%, rgba(136,0,255,0.3) 35%, rgba(209,0,255,0.3) 100%);
-  z-index: -1;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
   width: 100%;
-  height: 70px; /* Aumentamos la altura para que cubra más el corte */
-  bottom: -60px; /* Bajamos la posición del blur */
-  left: 0;
-  background: linear-gradient(to bottom, rgba(4,0,255,0.4), transparent);
-  filter: blur(25px); /* Intensificamos el desenfoque */
-  transition: 2s;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen para mayor contraste */
   z-index: 1;
 }
-
-.hero:hover::after {
-  animation: heroBlurAnimation 2.5s infinite forwards;
-}
-
-@keyframes heroBlurAnimation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 700px;
-  padding: 40px;
-  background: #fff(255, 255, 255, 0.4);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  margin-left: 10%;
-  margin-top: 170px; /* Este valor baja el contenido; ajústalo según lo necesites */
+  max-width: 800px;
+  padding: 20px;
 }
-
 
 .hero-title {
-  font-family: "K2D", sans-serif;
-  font-weight: 600; /* SemiBold */
-  font-size: 48px;
-  color: #FFFFFF; /* Texto blanco */
-  text-align: left; /* Asegurar alineación correcta */
-  line-height: auto; /* Se ajusta automáticamente */
-  letter-spacing: 0%;
-  position: absolute;
-  left: 50px;
-  top: -70px;
-  width: 403px;
-  height: 234px;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-
 .hero-subtitle {
-  font-family: "K2D", sans-serif;
-  font-weight: 500; /* Medium */
-  font-size: 24px;
-  color: #FFFFFF; /* Texto blanco */
-  text-align: left;
-  line-height: auto; /* Ajuste automático */
-  letter-spacing: 0%;
-  position: absolute;
-  left: 35px;
-  top: 170px; /* Ajusta la posición para coincidir con Figma */
-  width: 438px;
-  height: 65px;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
 .hero-description {
-  font-family: "K2D", sans-serif;
-  font-weight: 400; /* Regular */
-  font-size: 15px;
-  color: #FFFFFF; /* Texto blanco */
-  text-align: left;
-  line-height: auto; /* Ajuste automático */
-  letter-spacing: 0%;
-  position: absolute;
-  left: -5px;
-  top: 340px; /* Ajusta la posición según Figma */
-  width: 1104px;
-  height: 40px;
-}
-
-
-.hero-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(to bottom, #001f3f(0, 0, 0, 0.3), transparent);
-  z-index: 1;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  color: #e0e0e0;
 }
 
 .cta-button {
-  font-family: "K2D", sans-serif;
-  font-weight: 600; /* Bold */
-  font-size: 22px;
-  color: #FFFFFF; /* Texto blanco */
-  background-color: #9DCD66; /* Color exacto del botón */
+  padding: 12px 30px;
+  background-color: #9DCD66;
   border: none;
-  padding: 16px 40px;
-  border-radius: 10px;
-  text-align: center;
+  color: #0B1B2B;
+  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  position: absolute;
-  left: 860px; /* Ajustado según Figma */
-  top: 180px; /* Ajustado según Figma */
-  width: 242px;
-  height: 64px;
   transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #457112;
+  background-color: #9DCD66;
+}
+
+/* 🔁 Responsive */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 15px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
 }

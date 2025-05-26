@@ -7,6 +7,7 @@ import "../src/styles/HomePage/ourSolutions.css";
 import "../src/styles/HomePage/propellerSection.css";
 import "../src/styles/HomePage/energyCarrousel.css";
 import "../src/styles/HomePage/energyServices.css";
+import "../src/styles/styles.css"
 
 
 
