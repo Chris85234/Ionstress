@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('/public/assets/background.png'); /* Cambia al path correcto */
+  background-image: url('https://media.giphy.com/media/MsjwOAnbFzOXm/giphy.gif'); /* Cambia al path correcto */
   background-size: cover;
   background-position: center;
   display: flex;

@@ -38,9 +38,9 @@
 /* Imagen sobrepuesta del aerogenerador */
 .propeller-image-overlay {
   position: absolute;
-  top: -60px;    /* Ajusta para mover la imagen verticalmente */
-  right: -50px; /* Ajusta para mover la imagen horizontalmente */
-  width: 450px;  /* Tamaño de la imagen, ajusta según el diseño */
+  top: 80px;    /* Ajusta para mover la imagen verticalmente */
+  right: 90px; /* Ajusta para mover la imagen horizontalmente */
+  width: 300px;  /* Tamaño de la imagen, ajusta según el diseño */
   max-width: 100%;
   z-index: 3;
 }

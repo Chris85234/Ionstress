@@ -18,7 +18,7 @@ const PropellerSection = () => {
       </div>
       {/* Imagen sobrepuesta (a la derecha) – utiliza la imagen de aerogenerador */}
       <img 
-        src="/assets/propeller.gif" 
+        src="/assets/drone.png" 
         alt="Aerogenerador Animado" 
         className="propeller-image-overlay" 
       />

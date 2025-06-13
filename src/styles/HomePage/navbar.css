@@ -29,6 +29,18 @@
 .nav-links a {
   text-decoration: none;
   color: var(--text-color);
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 800;
+  font-size: 3 rem;
 }
+
+
+.navbar {
+  display: flex;
+  justify-content: flex-end; /* Alinea al lado derecho */
+  background: rgba(139, 255, 62, 0.2); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Efecto vidrio */
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 10px;
+}
+
